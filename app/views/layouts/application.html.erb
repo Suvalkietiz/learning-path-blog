@@ -10,16 +10,16 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
-  <body class="max-w-prose mx-auto leading-7 space-y-4">
+<!--  mx-auto leading-7 space-y-4-->
+  <body class="max-w-prose mx-auto space-y-4 font-[Arial]">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <div>
+    <div class="font-bold text-blue-500 space-y-2 mb-8">
       <% if user_signed_in? %>
         <%#= link_to "Profiliukas", edit_user_registration_path %>
-        <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
-        <%= link_to "New Post", new_blog_post_path %>
+        <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "text-black bg-gray-100 px-4 py-2 rounded hover:bg-gray-200" %>
+        <div class="hover:underline"><%= link_to "New Post", new_blog_post_path %></div>
       <%# else %>
         <%#= link_to "Prisijungti", new_user_session_path %>
         <%#= link_to "Rgeistruotis", new_user_registration_path %>

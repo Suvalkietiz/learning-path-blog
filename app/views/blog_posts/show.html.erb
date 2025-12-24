@@ -1,3 +1,13 @@
-<%= link_to "Edit blog post", edit_blog_post_path(@blog_post) if user_signed_in? %>
-<h1><%= @blog_post.title %></h1>
+<header class="font-bold text-blue-500 space-y-2 mb-8">
+  <% if user_signed_in? %>
+    <div class="hover:underline">
+      <%= link_to "Edit blog post", edit_blog_post_path(@blog_post) %>
+    </div>
+  <% end %>
+  <div class="hover:underline">
+    <%= link_to "Go Back", root_path %>
+  </div>
+</header>
+
+<h1 class="font-semibold text-2xl"><%=@blog_post.title %></h1>
 <%= @blog_post.body %>

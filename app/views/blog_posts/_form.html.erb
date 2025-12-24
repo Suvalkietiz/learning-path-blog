@@ -2,19 +2,19 @@
   <% if form.object.errors.any? %>
     <div>
       <% form.object.errors.full_messages.each do |message| %>
-        <div> <%= message %> </div>
+        <div class="text-red-500"> <%= message %> </div>
       <% end %>
     </div>
   <% end %>
 
-  <div>
+  <div class="space-x-8 mb-6">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class:"border rounded" %>
   </div>
-  <div>
+  <div class="space-x-8">
     <%= form.label :body %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, class: "border rounded" %>
   </div>
 
-  <%= form.button %>
+  <%= form.button class: "text-black bg-gray-100 px-4 py-2 rounded hover:bg-gray-200"%>
 <% end %>
