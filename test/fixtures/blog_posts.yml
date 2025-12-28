@@ -7,3 +7,22 @@ one:
 two:
   title: MyString
   body: MyText
+
+
+draft:
+  title: "Draft"
+  body: "This is draft"
+  published_at: null
+
+
+published:
+  title: "Published"
+  body: "This is published"
+  published_at: <%= Time.current%>
+
+
+scheduled:
+  title: "Scheduled"
+  body: "This is scheduled"
+  published_at: <%= 1.second.from_now%>
+
